@@ -1,0 +1,210 @@
+<!--
+    O Browser determina qual regra aplicar e como colocar, caso haja diversas regras para o mesmo elemento
+
+    * O fluxo de leitura da sua folha de estilo é de cima para baixo
+
+    ****IMPORTANTE CONSIDERAR*****
+    1. Origem da folha de estilo
+    2. Especificidade
+    3. Importância
+
+    ****TIPOS DE ESTILOS*****
+
+    inline > tag style > tag link
+
+    *Especificidade
+
+    Cálculo matemático desenvolvido automaticamente pela regra css,
+    onde cada tipo de seletor e origem do estilo possuem valores a serem considerados
+    
+    0. Universal selector, combinator e pseudo-class(:not())
+    1. Elementos do tipo selector e pseudo-elementos (:before, ::after)
+    10. Classes e atriubutos de seletores ([type="radio"])
+    100. Seletor ID
+    1000. Inline
+
+    -------------------------
+
+    #At-rules
+     São regras relacionadas \o comportamento do CSS, começa cm um sinal de @ seguido do identificador e do valor.
+
+     São os seguintes:
+     @import url{"htp://linkexterno.com.br/style.css"}
+
+     @media são regras condicionais para vários dispositivos.
+
+     @media(min-width:365px){     }
+
+     @font-face épara colocar fontes externas.
+     @font-face{     }
+
+     @keyframes serve para as animations do CSS.
+     @keyframes animationname{     }
+
+     ** Combinadores (Combinators) **
+
+     Combinadores são utilizados para buscar e combinar seletores a fim de aplicar uma estilização.
+
+     Tipos:
+
+     ** Descendente combinator **
+     Identificado por um espaço entre os seletores.
+     -Busca um elemento dentro de outro
+
+     body ul il
+
+     ** Child Combinator **
+     Identificado pelo sinal > entre dois seletores
+     -Seleciona somente o eleento filho direto do pai
+     -Elementos depois do filho direto serão desconsiderados
+
+     ** Adjacent sibling combinator ** 
+     Idenificado pelo sinal de + entre dois seletores 
+     - Busca somente o elemento do lado direto que é irmão direto da hierarquia
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <style>
+       /* body ul li {
+            background: green;
+            color: red;
+        }
+        body section div ul li{
+            background: blue;
+            color: yellow;
+        }
+        body > ul{
+            background: red
+            e;
+        }
+        div > ul{
+            background: blue;
+        }
+        h1 + p{
+            color: green;
+        }*/
+
+        h1 ~ p{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+   <!-- <div>
+        <p>Teste</p>
+    </div>
+    <ul>
+        <li>Testando Combinadores</li>
+    </ul>
+    <div>Outro formato</div>
+    <section>
+        <div>
+            <ul>
+                <li>outro marcador</li>
+            </ul>
+        </div>
+    </section>-->
+
+    <h1>Título</h1>
+    <p>Mais um parágrafo</p>
+    <button>Enviar</button>
+    <p>Outro parágrafo</p>
+    <p>Outro parágrafo</p>
+    <p>Outro parágrafo</p>
+    <p>Outro parágrafo</p>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1<link rel="stylesheet" href="./assets/style.css">.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+<style>
+    h1{
+        background: blue;
+    }
+
+</style>
+
+</head>
+<body>
+  <div>
+    <h1 style="background:red ;">Eu sou um título</h1>
+</div>  
+</body>
+</html>
+
+*********************************************
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <style>
+        h1{
+            background: blue;
+        
+        }
+        #super-title{
+            background: red;
+        }
+        h1{
+            background: green;
+        }
+        .my-title-2{
+            background:yellow;
+        }
+        strong{
+        color: blueviolet;
+        }
+        .my-text strong{
+            color: aqua;
+        }
+    
+    </style>
+    
+</head>
+<body>
+   <h1 id="super-title">  Testando Especificidade
+   </h1> 
+   <p class="my-text">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Optio quaerat consequatur excepturi <strong>veritatis </strong>saepe est eos, <br> enim officia voluptatum facere voluptatibus atque adipisci, velit quisquam <br> eveniet alias, delectus temporibus harum.
+   </p>
+   <h1 class="my-title-2"> Testando Especificidade</h1>
+   <p class="my-text-2">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Optio quaerat consequatur excepturi veritatis saepe est eos, <br> enim officia voluptatum facere voluptatibus atque adipisci, velit quisquam <br> eveniet alias,<strong>delectus</strong> <br> temporibus harum.
+   </p>
+</body>
+</html>-->
+
+
+
+
+
+
+
