@@ -4,7 +4,6 @@ Repositório exclusivo para entrega de exercícios e replicas da aula de CSS.
 * Conhecendo o CSS
 * Origem do CSS
 * Fluxo de Leitura e Especificidade
-* Fluxo de Leitura e Especificidade
 * At Rules e Combinators
 * Shorthand e Margin
 * Vendor Prefix
@@ -15,7 +14,7 @@ Repositório exclusivo para entrega de exercícios e replicas da aula de CSS.
 * Page Layout - Grid
 * Colors e Background
 * A Beleza dos Textos
-* Pseudo Class e Element Parte I
-* Pseudo Class e Element Parte II
-* Pseudo Class e Element Parte III
+* Pseudo Class e Element Parte 1
+* Pseudo Class e Element Parte 2
+* Pseudo Class e Element Parte 3
 * Design responsivo
